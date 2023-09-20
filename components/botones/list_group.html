@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <br>
+    <div class="container">
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                Link active
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">Other Link</a>
+            <a href="#" class="list-group-item list-group-item-action">Other Link/a>
+                <a href="#" class="list-group-item list-group-item-action">Other Link</a>
+                <a class="list-group-item list-group-item-action disabled">Disabled</a>
+        </div>
+    </div>
+
+    const alertTrigger = document.getElementById('liveAlertBtn')
+    if (alertTrigger) {
+      alertTrigger.addEventListener('click', () => {
+        appendAlert('Nice, you triggered this alert message!', 'success')
+      })
+    }
+
+</body>
+<script src="../../node_modules/@popperjs/core/dist/umd/popper-base.js"></script>
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</html>

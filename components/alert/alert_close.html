@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert" id="myAlert">
+            <strong>Delete!</strong> Are you sure to delete the user?
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+    </div>
+
+
+
+</body>
+<script src="../../node_modules/@popperjs/core/dist/umd/popper-base.js"></script>
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script>
+    // const myAlert = bootstrap.Alert.getOrCreateInstance('#myAlert')
+    // myAlert.close()
+    const myAlert = document.getElementById('myAlert')
+
+    myAlert.addEventListener('close.bs.alert', event => {
+        console.log('closed')
+    })
+</script>
+
+</html>

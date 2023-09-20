@@ -1,0 +1,72 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
+
+.category-list i {
+    color: #8800AA;
+}
+
+.category-list a {
+    text-decoration: none;
+    color: #000;
+}
+
+.category-list .card {
+    height: 100%;
+    margin-top: 5px;
+    transition: .5s all;
+}
+
+.category-list .card:hover {
+    color: #FFF;
+    background: #8800AA;
+}
+
+.category-list .card:hover i,
+.category-list .card:hover a {
+    color: #FFF;
+}
+
+#mainNav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    border-bottom: 1px solid transparent;
+
+    /* background: transparent; */
+}
+
+#mainNav a {
+    color: #000 !important;
+}
+
+header#mainHeader {
+    position: relative;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    background: no-repeat center center;
+    background-size: cover;
+    color: #FFF !important;
+}
+
+header#mainHeader:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #212529;
+    opacity: 0.5;
+}
+
+@media (min-width: 992px) {
+    #mainNav {
+        background-color: transparent !important;
+    }
+    #mainNav a {
+        color: #FFF !important;
+    }
+}

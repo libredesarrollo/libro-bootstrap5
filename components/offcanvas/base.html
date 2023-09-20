@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <br>
+    <div class="container">
+        <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#myOffcanvas" role="button">
+            Link with href
+        </a>
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#myOffcanvas">
+            Button with data-bs-target
+        </button>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="myOffcanvas"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi possimus veritatis deleniti et nostrum
+                    magnam corrupti! Ad maxime nisi ab, iste veniam consectetur, officia, exercitationem quas vero fugit
+                    praesentium laborum.
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="../../node_modules/@popperjs/core/dist/umd/popper-base.js"></script>
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script>
+    // const myOffcanvas = bootstrap.Offcanvas.getOrCreateInstance('#myOffcanvas')
+    // myOffcanvas.close()
+
+    const myOffcanvas = document.getElementById('myOffcanvas')
+    myOffcanvas.addEventListener('show.bs.offcanvas', event => {
+        console.log("show")
+    })
+    myOffcanvas.addEventListener('hide.bs.offcanvas', event => {
+        console.log("hide")
+    })
+
+</script>
+
+</html>

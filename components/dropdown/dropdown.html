@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+    <br>
+    <div class="container">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Item 1</a></li>
+                <li><a class="dropdown-item" href="#">Item 2</a></li>
+                <li><a class="dropdown-item" href="#">Item 3</a></li>
+            </ul>
+        </div>
+        <br>
+        <div class="dropdown">
+            <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Item 1</a></li>
+                <li><a class="dropdown-item" href="#">Item 2</a></li>
+                <li><a class="dropdown-item" href="#">Item 3</a></li>
+            </ul>
+        </div>
+        <br>
+        <div class="dropdown" id="myDropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Item 1</a></li>
+                <li><a class="dropdown-item" href="#">Item 2</a></li>
+                <li><a class="dropdown-item" href="#">Item 3</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Other Item</a></li>
+            </ul>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+</body>
+<script src="../../node_modules/@popperjs/core/dist/umd/popper-base.js"></script>
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script>
+    const myDropdown = document.getElementById('myDropdown')
+    myDropdown.addEventListener('show.bs.dropdown', event => {
+        console.log("show")
+    })
+    myDropdown.addEventListener('hide.bs.dropdown', event => {
+        console.log("hide")
+    })
+    myDropdown.addEventListener('hidden.bs.dropdown', event => {
+        console.log("hidden")
+    })
+
+    // const myDropdowni = bootstrap.Dropdown.getOrCreateInstance('#myDropdown')
+    // myDropdowni.close()
+
+</script>
+
+</html>
